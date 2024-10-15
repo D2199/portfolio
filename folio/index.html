@@ -7,9 +7,9 @@
     <title>portfolio</title>
     <style>
         :root {
-            --primary-bg: rgba(180, 180, 193, 0.61);
+            --primary-bg: rgba(58, 58, 59, 0.747);
             --secondary-bg: rgba(255, 0, 191, 0.622);
-            --tertiary-bg: rgb(33, 34, 33);
+            --tertiary-bg: rgb(52, 146, 52);
             --primary-color: black;
             --secondary-color: white;
 
@@ -123,7 +123,7 @@
             color: rgb(255, 255, 255);
             background-color: var(--primary-bg);
 
-
+            border-radius: 10px;
             box-shadow: 5px 5px 5px rgb(75, 75, 75);
         }
 
@@ -374,16 +374,46 @@
             align-items: center;
             gap: 5%;
             flex-wrap: wrap-reverse;
-
-
-
         }
 
         .hero-img {
             width: 200px;
             height: 200px;
             border-radius: 35% 30% 60% 40%;
+            border-top: 2px solid rgb(109, 255, 47);
+            /* border-bottom: 2px solid green; */
             overflow: hidden;
+            margin: 10px;
+            animation: bor 1s ease-in-out infinite;
+            /* border-spacing: 20px; */
+
+        }
+
+        @keyframes bor {
+            10% {
+                border: 0;
+                border-top: 5px solid blue;
+                box-shadow: 5px 5px 5px blue;
+            }
+
+            30% {
+                border: 0;
+                border-right: 5px solid rgb(85, 255, 0);
+                box-shadow: 1px 5px 5px blue;
+            }
+
+            60% {
+                border: 0;
+                border-bottom: 5px solid red;
+                box-shadow: -5px -5px 5px blue;
+            }
+
+            90% {
+                border: 0;
+                border-left: 5px solid rgb(0, 255, 229);
+                box-shadow: -5px 5px 5px blue;
+            }
+
         }
 
         .action button {
@@ -515,7 +545,7 @@
         .projects-con {
             /* padding: 10px; */
             display: flex;
-            width: 90vw;
+            max-width: 90vw;
             /* flex-wrap: wrap; */
             overflow: scroll;
             gap: 10px;
@@ -532,7 +562,7 @@
             border-radius: 10px;
             background-color: var(--tertiary-bg);
             min-width: 300px;
-            max-width: 350px;
+            /* max-width: 350px; */
             /* flex-wrap: wrap; */
             transition-property: transform;
             transition-duration: 1s;
@@ -592,7 +622,8 @@
                         (React) HTML/CSS, Python (Django, Flask), MySQL Proficient in both
                         front-end and back-end technologies with a passion for delivering high-
                         quality solutions. Dedicated to staying updated with industry trends. </div>
-                    <div class="action"><button>Download CV</button></div>
+                    <div class="action"><button>Download
+                            CV</button></div>
                 </div>
                 <div class="hero-img"><img width="100%" draggable="false" height="100%" src="./img/file (1).enc" alt="">
                 </div>
@@ -799,7 +830,7 @@
         console.log()</script>
     <script>
         const brain = document.querySelector('#brain')
-        const skills = { html: '70%', css: "80%", js: "85%", python: "90%" }
+        const skills = { html: '70%', css: "80%", js: "85%", python: "90%", react: "20%", django: "50%" }
         // document.onload = () => {
         //     brain.style.display = 'block'
         // }
@@ -887,7 +918,7 @@
                 open(e.target.attributes.href.value)
             })
         });
-        open('#contect')
+        open('#skills')
     </script>
     <!-- <script>
     
